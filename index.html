@@ -15,9 +15,9 @@
       </div>
     </div>
     <div class="navbar" id="button-container">
-      <button id="all" class="btn active" onclick="filterSelection('all'); updateNav('all')">All</button>
-      <button id="monochrome" class="btn" onclick="filterSelection('monochrome'); updateNav('monochrome')">Monochrome</button>
-      <button id="analog" class="btn last" onclick="filterSelection('analog'); updateNav('analog')">Analog</button>
+      <div class="button-item"><button class="btn active" onclick="filterSelection('all'); updateNav('all')">All</button> <hr class="nav-line default" id="all"></div>
+      <div class="button-item"><button class="btn" onclick="filterSelection('monochrome'); updateNav('monochrome')">Monochrome</button> <hr class="nav-line" id="monochrome"></div>
+      <div class="button-item"><button class="btn last" onclick="filterSelection('analog'); updateNav('analog')">Analog</button> <hr class="nav-line" id="analog"></div>
     </div>
     <main>
       <div class="images">

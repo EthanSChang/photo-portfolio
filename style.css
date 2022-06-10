@@ -49,6 +49,25 @@ hr{
     background-color: var(--grey);
     height: 6vh;
 }
+/* todo: button moves upward when selected bc of hr */
+.button-item hr{
+    width: 1em;
+    height: 0em;
+    display: none;
+    border: 0.075em solid white;
+    border-radius: 1em;
+}
+
+hr.default{
+    display: block;
+}
+
+.button-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .btn:not(.last){
     border-right: 0.05em solid white;
@@ -81,9 +100,7 @@ hr{
     align-items: center;
 }
 
-.btn.active{
-    text-decoration-line: underline;
-}
+
 /* #endregion */
 
 /* #region images */
@@ -102,9 +119,6 @@ hr{
     padding: 0;
     
 }
-/* .active{
-    display: block;
-} */
 
 .show{
     display: flex;

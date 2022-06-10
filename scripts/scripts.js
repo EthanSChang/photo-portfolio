@@ -35,12 +35,12 @@ function RemoveClass(element, name) {
 }
 
 function updateNav(id){
-    var btns = document.getElementsByClassName("btn");
+    var lines = document.getElementsByClassName("nav-line");
 
-    for(var i=0; i<btns.length; i++){
-        btns[i].classList.remove("active");
+    for(var i=0; i<lines.length; i++){
+        lines[i].style.display = "none";
     }
     var changedBtn = document.getElementById(id);
-    changedBtn.className += " active";    
+    changedBtn.style.display = "block";    
 }
 
