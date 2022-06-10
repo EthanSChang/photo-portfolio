@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'Monserrat-ExtraLight';
+    src: url("fonts/Montserrat-ExtraLight.ttf");
+}
+
+.background {
+    padding: 0;
+    background-image: url("images/background.jpg");
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+body{
+    margin: 0;
+}
+
+:root{
+    --grey: rgb(34, 34, 34);
+}
+
+/* #region title */
+
+.title-text{
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    font-family: Monserrat-ExtraLight;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.064);
+}
+
+
+hr{
+    border: 0.075em solid white;
+    height: 0em;
+    margin: 0;
+    width: 15em;
+}
+/* #endregion */
+/* #region navbar */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grey);
+    height: 6vh;
+}
+
+.btn:not(#last){
+    border-right: 0.05em solid white;
+}
+
+.btn {
+    border: none;
+    margin: none;
+    outline: none;
+    background-color: #00000000;
+    cursor: pointer;
+    font-family: Monserrat-ExtraLight;
+    font-size: 1.25em;
+    color: white;
+
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+}
+.btn:hover {
+    text-decoration-line: underline;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+.dot{
+    display: none;
+    height: 0.25em;
+    width: 0.25em;
+    margin: 0;
+    background-color: white;
+    border-radius: 50%;
+}
+.dot .active{
+    display: block;
+}
+/* #endregion */
+
+/* #region images */
+.images{
+    column-count: 5;
+    column-gap: 5px;
+    background-color: var(--grey);
+    
+}
+.filterDiv{
+    display: none;
+}
+.images img{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    
+}
+/* .active{
+    display: block;
+} */
+
+.show{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+/* #endregion */
+
+
+
+
+
