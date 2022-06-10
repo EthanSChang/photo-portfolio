@@ -38,9 +38,9 @@ function updateNav(id){
     var lines = document.getElementsByClassName("nav-line");
 
     for(var i=0; i<lines.length; i++){
-        lines[i].style.display = "none";
+        lines[i].classList.remove("active");
     }
     var changedBtn = document.getElementById(id);
-    changedBtn.style.display = "block";    
+    changedBtn.classList.add("active");    
 }
 
