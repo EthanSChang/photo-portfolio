@@ -33,3 +33,14 @@ function RemoveClass(element, name) {
     }
     element.className = arr1.join(" ");
 }
+
+function updateNav(id){
+    var btns = document.getElementsByClassName("btn");
+
+    for(var i=0; i<btns.length; i++){
+        btns[i].classList.remove("active");
+    }
+    var changedBtn = document.getElementById(id);
+    changedBtn.className += " active";    
+}
+

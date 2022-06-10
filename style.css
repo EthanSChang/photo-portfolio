@@ -50,7 +50,7 @@ hr{
     height: 6vh;
 }
 
-.btn:not(#last){
+.btn:not(.last){
     border-right: 0.05em solid white;
 }
 
@@ -71,6 +71,7 @@ hr{
 }
 .btn:hover {
     text-decoration-line: underline;
+    text-decoration-color: rgb(77, 190, 255);
 }
 
 .button{
@@ -79,16 +80,9 @@ hr{
     justify-content: center; 
     align-items: center;
 }
-.dot{
-    display: none;
-    height: 0.25em;
-    width: 0.25em;
-    margin: 0;
-    background-color: white;
-    border-radius: 50%;
-}
-.dot .active{
-    display: block;
+
+.btn.active{
+    text-decoration-line: underline;
 }
 /* #endregion */
 
