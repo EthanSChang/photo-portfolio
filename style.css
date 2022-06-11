@@ -3,6 +3,12 @@
     src: url("fonts/Montserrat-ExtraLight.ttf");
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 .background {
     padding: 0;
     background-image: url("images/background.jpg");
@@ -23,7 +29,7 @@ body {
 
 .title-text {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     color: white;
     font-family: Monserrat-ExtraLight;
     display: flex;
@@ -37,7 +43,6 @@ body {
 hr {
     border: 0.075em solid white;
     height: 0em;
-    margin: 0;
     width: 15em;
 }
 
@@ -49,11 +54,6 @@ hr {
     align-items: center;
     background-color: var(--grey);
     height: 6vh;
-}
-
-/* todo: button moves upward when selected bc of hr */
-.button-item hr {
-    
 }
 
 .button-item {
@@ -96,12 +96,10 @@ hr {
 }
 
 .nav-line {
-    width: 1em;
     height: 0em;
-
     border: 0.075em solid var(--grey);
     border-radius: 1em;
-    width: 1em;
+    width: 0.75em;
 }
 
 .nav-line.active {
@@ -113,8 +111,8 @@ hr {
 
 /* #region images */
 .images {
-    column-count: 5;
-    column-gap: 5px;
+    column-count: 3;
+    column-gap: 0.75vw;
     background-color: var(--grey);
 
 }
@@ -127,6 +125,7 @@ hr {
     width: 100%;
     height: auto;
     padding: 0;
+    margin-bottom: 0.75vw;
 
 }
 
@@ -136,4 +135,71 @@ hr {
     justify-content: center;
 }
 
+/* #endregion */
+
+/* #region modal */
+
+#modal {
+    background-color: rgba(0, 0, 0, 0.871);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+}
+
+#modal.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    z-index: 150;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.modal-btn {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+}
+
+#modal-screen-btn {
+    z-index: 110;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.modal-icon{
+    
+    width: 2.5vw;
+    margin: 0;
+}
+#modal-nav-btns{
+    /* position: fixed;
+    top: -50%;
+    left: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-nav-btn{
+    z-index: 120;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.modal-nav-btn:hover{
+    cursor: pointer;
+}
 /* #endregion */

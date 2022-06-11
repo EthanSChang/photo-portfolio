@@ -34,13 +34,44 @@ function RemoveClass(element, name) {
     element.className = arr1.join(" ");
 }
 
-function updateNav(id){
+function updateNav(id) {
     var lines = document.getElementsByClassName("nav-line");
 
-    for(var i=0; i<lines.length; i++){
+    for (var i = 0; i < lines.length; i++) {
         lines[i].classList.remove("active");
     }
     var changedBtn = document.getElementById(id);
-    changedBtn.classList.add("active");    
+    changedBtn.classList.add("active");
 }
 
+function openModal(img) {
+    var modal = document.getElementById("modal");
+    modal.classList.add("active");
+    var modalImg = document.getElementById('modal-img');
+    modalImg.src = "images/" + img + ".jpg";
+    currentModalImg = img;
+}
+
+function closeModal() {
+    var modal = document.getElementById("modal");
+    modal.classList.remove("active");
+}
+
+var currentModalImg;
+
+function modalIncrement(direction){
+    var images = document.getElementsByClassName("modal-btn");
+    var imgIndex;
+    for(i = 0; i < images.length; i++){
+        if(images[i].id == currentModalImg){
+            imgIndex = i;
+            break;
+        }
+    }
+    
+    if(direction == "left" && imgIndex-1 >= 0){
+        openModal(images[imgIndex-1].id);
+    } else if(direction =="right" && imgIndex+1 < images.length) {
+        openModal(images[imgIndex+1].id);
+    }
+}

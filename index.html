@@ -17,23 +17,36 @@
     <div class="navbar" id="button-container">
       <div class="button-item"><button class="btn active" onclick="filterSelection('all'); updateNav('all')">All</button> <hr class="nav-line active" id="all"></div>
       <div class="button-item"><button class="btn" onclick="filterSelection('monochrome'); updateNav('monochrome')">Monochrome</button> <hr class="nav-line" id="monochrome"></div>
-      <div class="button-item"><button class="btn last" onclick="filterSelection('analog'); updateNav('analog')">Analog</button> <hr class="nav-line" id="analog"></div>
+      <div class="button-item"><button class="btn" onclick="filterSelection('analog'); updateNav('analog')">Analog</button> <hr class="nav-line" id="analog"></div>
+      <div class="button-item"><button class="btn" onclick="filterSelection('nature'); updateNav('nature')">Nature</button> <hr class="nav-line" id="nature"></div>
+      <div class="button-item"><button class="btn last" onclick="filterSelection('flowers'); updateNav('flowers')">Flowers</button> <hr class="nav-line" id="flowers"></div>
     </div>
     <main>
       <div class="images">
-        <img class="filterDiv monochrome" src="images/background.jpg" loading="lazy">
-        <img class="filterDiv analog" src="images/dcmp.jpg" loading="lazy">
-        <img class="filterDiv monochrome" src="images/background.jpg" loading="lazy">
-        <img class="filterDiv monochrome" src="images/background.jpg" loading="lazy">
-        <img class="filterDiv analog" src="images/dcmp.jpg" loading="lazy">
-        <img class="filterDiv monochrome" src="images/background.jpg" loading="lazy">
-        <img class="filterDiv monochrome" src="images/background.jpg" loading="lazy">
-        <img class="filterDiv monochrome" src="images/background.jpg" loading="lazy">
-        <img class="filterDiv analog" src="images/dcmp.jpg" loading="lazy">
-        <img class="filterDiv monochrome" src="images/background.jpg" loading="lazy">
-
+        <button id="background" onclick="openModal('background')" class="modal-btn">
+          <img class="filterDiv monochrome nature" src="images/background.jpg" loading="lazy">
+        </button>
+        <button id="dcmp" onclick="openModal('dcmp')" class="modal-btn">
+          <img class="filterDiv analog" src="images/dcmp.jpg" loading="lazy">
+        </button>
+        <button id="branches" onclick="openModal('branches')" class="modal-btn">
+          <img class="filterDiv monochrome nature" src="images/branches.jpg" loading="lazy">
+        </button>
+        <button id="dahlia" onclick="openModal('dahlia')" class="modal-btn">
+          <img class="filterDiv nature flowers" src="images/dahlia.jpg" loading="lazy">
+        </button>
+        
       </div>
   
+      <div id="modal">
+        <button id="modal-screen-btn" onclick="closeModal()"></button>
+        <img id="modal-img" src="images/dcmp.jpg">
+        <div id="modal-nav-btns">
+          <button class="modal-nav-btn" onClick="modalIncrement('left')"><img class="modal-icon" src="icons/chevron-left.svg"></button>
+          <button class="modal-nav-btn" onClick="modalIncrement('right')"><img class="modal-icon" src="icons/chevron-right.svg"></button>
+        </div>
+        
+      </div>
         
   
     </main>
