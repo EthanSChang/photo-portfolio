@@ -45,11 +45,11 @@ function updateNav(id) {
 }
 
 function openModal(img) {
-    var modal = document.getElementById("modal");
-    modal.classList.add("active");
     var modalImg = document.getElementById('modal-img');
     modalImg.src = "images/" + img + ".jpg";
     currentModalImg = img;
+    var modal = document.getElementById("modal");
+    modal.classList.add("active");
 }
 
 function closeModal() {
