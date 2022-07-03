@@ -48,47 +48,54 @@ function updateNav(id) {
 //     var modalImg = document.getElementById('modal-img');
 //     modalImg.src = "images/" + img + ".jpg";
 //     currentModalImg = img;
-//     var modal = document.getElementById("modal");
-//     modal.classList.add("active");
+    
+
+//     $('img#modal-img').load(function(){  
+//         var modal = document.getElementById("modal");
+//         modal.classList.add("active");
+    
+//     });
+    
 // }
 
-function openModal(img) {
-    
-    var modalImg = document.createElement("img");
-    modalImg.setAttribute("id", "modal-img");
-    modalImg.setAttribute("src", "images/" + img + ".jpg");
-    modalImg.setAttribute("class", "active");
-    currentModalImg = img;
-    document.getElementById("modal-screen-items").insertBefore(modalImg, document.getElementById("modal-nav-btns"));
 
-    var modal = document.getElementById("modal");
-    modal.classList.add("active");
-}
 
 function closeModal() {
     var modal = document.getElementById("modal");
     modal.classList.remove("active");
 
-    document.getElementById("modal-img").remove();
+    // document.getElementById("modal-img").remove();
 }
 
-var currentModalImg;
+// var currentModalImg;
 
-function modalIncrement(direction){
-    var images = document.getElementsByClassName("modal-btn");
-    var imgIndex;
-    for(i = 0; i < images.length; i++){
-        if(images[i].id == currentModalImg){
-            imgIndex = i;
-            break;
-        }
-    }
+// function modalIncrement(direction){
+//     var images = document.getElementsByClassName("modal-btn");
+//     var imgIndex;
+//     for(i = 0; i < images.length; i++){
+//         if(images[i].id == currentModalImg){
+//             imgIndex = i;
+//             break;
+//         }
+//     }
     
-    if(direction == "left" && imgIndex-1 >= 0){
-        document.getElementById("modal-img").remove();
-        openModal(images[imgIndex-1].id);
-    } else if(direction =="right" && imgIndex+1 < images.length) {
-        document.getElementById("modal-img").remove();
-        openModal(images[imgIndex+1].id);
-    }
-}
+//     if(direction == "left" && imgIndex-1 >= 0){
+//         document.getElementById("modal-img").remove();
+//         openModal(images[imgIndex-1].id);
+//     } else if(direction =="right" && imgIndex+1 < images.length) {
+//         document.getElementById("modal-img").remove();
+//         openModal(images[imgIndex+1].id);
+//     }
+// }
+
+
+$(document).ready(function(){
+    $("img.filterDiv").click(function(){
+        var imgSrc = $(this).attr("src");
+        console.log(imgSrc);
+        $("img#modal-img").attr("src", imgSrc).one("load", function(){
+            $("#modal").addClass("active");
+        });
+    })
+  
+}); 

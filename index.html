@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Photography Portfolio</title>
-    <link href="style.css" rel="stylesheet">
-    <script src="scripts/scripts.js"></script>
-  </head>
-  <body onload="filterSelection('all')">
-    <div class="background">
-      <div class="title-text">
-        <h1 class="text">Ethan Chang</h1>
-        <hr>
-        <h2 class="text">Photography</h2> 
-      </div>
+
+<head>
+  <meta charset="utf-8">
+  <title>Photography Portfolio</title>
+  <link href="style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="scripts/scripts.js"></script>
+</head>
+
+<body onload="filterSelection('all')">
+  <div class="background">
+    <div class="title-text">
+      <h1 class="text">Ethan Chang</h1>
+      <hr>
+      <h2 class="text">Photography</h2>
     </div>
-    <div class="navbar" id="button-container">
-      <div class="button-item"><button class="btn active" onclick="filterSelection('all'); updateNav('all')">All</button> <hr class="nav-line active" id="all"></div>
-      <div class="button-item"><button class="btn" onclick="filterSelection('monochrome'); updateNav('monochrome')">Monochrome</button> <hr class="nav-line" id="monochrome"></div>
-      <div class="button-item"><button class="btn" onclick="filterSelection('analog'); updateNav('analog')">Analog</button> <hr class="nav-line" id="analog"></div>
-      <div class="button-item"><button class="btn" onclick="filterSelection('nature'); updateNav('nature')">Nature</button> <hr class="nav-line" id="nature"></div>
-      <div class="button-item"><button class="btn last" onclick="filterSelection('flowers'); updateNav('flowers')">Flowers</button> <hr class="nav-line" id="flowers"></div>
+  </div>
+  <div class="navbar" id="button-container">
+    <div class="button-item"><button class="btn active" onclick="filterSelection('all'); updateNav('all')">All</button>
+      <hr class="nav-line active" id="all">
     </div>
-    <main>
-      <div class="images">
-        <button id="background" onclick="openModal('background')" class="modal-btn">
+    <div class="button-item"><button class="btn"
+        onclick="filterSelection('monochrome'); updateNav('monochrome')">Monochrome</button>
+      <hr class="nav-line" id="monochrome">
+    </div>
+    <div class="button-item"><button class="btn"
+        onclick="filterSelection('analog'); updateNav('analog')">Analog</button>
+      <hr class="nav-line" id="analog">
+    </div>
+    <div class="button-item"><button class="btn"
+        onclick="filterSelection('nature'); updateNav('nature')">Nature</button>
+      <hr class="nav-line" id="nature">
+    </div>
+    <div class="button-item"><button class="btn last"
+        onclick="filterSelection('flowers'); updateNav('flowers')">Flowers</button>
+      <hr class="nav-line" id="flowers">
+    </div>
+  </div>
+  <main>
+    <div class="images">
+      <!-- <button id="background" onclick="openModal('background')" class="modal-btn">
           <img class="filterDiv monochrome nature" src="images-min/background.jpg" loading="lazy">
         </button>
         <button id="dcmp" onclick="openModal('dcmp')" class="modal-btn">
@@ -34,26 +51,40 @@
         </button>
         <button id="dahlia" onclick="openModal('dahlia')" class="modal-btn">
           <img class="filterDiv nature flowers" src="images-min/dahlia.jpg" loading="lazy">
-        </button>
-        
-      </div>
-  
-      <div id="modal">
-        
-        <div id="modal-screen-items">
-          <button id="modal-screen-btn" onclick="closeModal()"></button>
-          <!-- <img id="modal-img" src="images/dcmp.jpg"> -->
-          <div id="modal-nav-btns">
-            <button class="modal-nav-btn" onClick="modalIncrement('left')"><img class="modal-icon" src="icons/chevron-left.svg"></button>
-            <button class="modal-nav-btn" onClick="modalIncrement('right')"><img class="modal-icon" src="icons/chevron-right.svg"></button>
-          </div>
+        </button> -->
+
+      <img class="filterDiv monochrome nature" src="images/background.jpg" loading="lazy">
+
+
+      <img class="filterDiv analog" src="images/dcmp.jpg" loading="lazy">
+
+
+      <img class="filterDiv monochrome nature" src="images/branches.jpg" loading="lazy">
+
+
+      <img class="filterDiv nature flowers" src="images/dahlia.jpg" loading="lazy">
+
+    </div>
+
+    <div id="modal">
+
+      <div id="modal-screen-items">
+        <button id="modal-screen-btn" onclick="closeModal()"></button>
+        <img id="modal-img" src="images/dcmp.jpg">
+        <div id="modal-nav-btns">
+          <button class="modal-nav-btn" onClick="modalIncrement('left')"><img class="modal-icon"
+              src="icons/chevron-left.svg"></button>
+          <button class="modal-nav-btn" onClick="modalIncrement('right')"><img class="modal-icon"
+              src="icons/chevron-right.svg"></button>
         </div>
-        
-        
       </div>
-        
-  
-    </main>
-   
-  </body>
+
+
+    </div>
+
+
+  </main>
+
+</body>
+
 </html>
