@@ -48,14 +48,14 @@ function updateNav(id) {
 //     var modalImg = document.getElementById('modal-img');
 //     modalImg.src = "images/" + img + ".jpg";
 //     currentModalImg = img;
-    
+
 
 //     $('img#modal-img').load(function(){  
 //         var modal = document.getElementById("modal");
 //         modal.classList.add("active");
-    
+
 //     });
-    
+
 // }
 
 
@@ -67,35 +67,35 @@ function closeModal() {
     // document.getElementById("modal-img").remove();
 }
 
-// var currentModalImg;
 
-// function modalIncrement(direction){
-//     var images = document.getElementsByClassName("modal-btn");
-//     var imgIndex;
-//     for(i = 0; i < images.length; i++){
-//         if(images[i].id == currentModalImg){
-//             imgIndex = i;
-//             break;
-//         }
-//     }
-    
-//     if(direction == "left" && imgIndex-1 >= 0){
-//         document.getElementById("modal-img").remove();
-//         openModal(images[imgIndex-1].id);
-//     } else if(direction =="right" && imgIndex+1 < images.length) {
-//         document.getElementById("modal-img").remove();
-//         openModal(images[imgIndex+1].id);
-//     }
-// }
+function modalIncrement(direction){
+    var currentModalImg = document.getElementById("modal-img").src;
+    var images = document.getElementsByClassName("filterDiv");
+    var imgIndex;
+
+    for(i = 0; i < images.length; i++){
+        if(images[i].src == currentModalImg){
+            imgIndex = i;
+            break;
+        }
+    }
+
+    if(direction == "left" && imgIndex-1 >= 0){
+        document.getElementById("modal-img").src = images[imgIndex-1].src;
+    } else if(direction =="right" && imgIndex+1 < images.length) {
+        document.getElementById("modal-img").src = images[imgIndex+1].src;
+    }
+}
 
 
-$(document).ready(function(){
-    $("img.filterDiv").click(function(){
+$(document).ready(function () {
+    $("img.filterDiv").click(function () {
         var imgSrc = $(this).attr("src");
-        console.log(imgSrc);
-        $("img#modal-img").attr("src", imgSrc).one("load", function(){
+        //console.log(imgSrc);
+        $("img#modal-img").attr("src", imgSrc).one("load", function () {
             $("#modal").addClass("active");
         });
     })
-  
+
+
 }); 
