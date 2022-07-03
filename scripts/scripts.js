@@ -48,13 +48,18 @@ function openModal(img) {
     var modalImg = document.getElementById('modal-img');
     modalImg.src = "images/" + img + ".jpg";
     currentModalImg = img;
-    var modal = document.getElementById("modal");
-    modal.classList.add("active");
+    // var modal = document.getElementById("modal");
+    // modal.classList.add("active");
 }
 
 function closeModal() {
     var modal = document.getElementById("modal");
     modal.classList.remove("active");
+}
+
+function showImg(){
+    var modal = document.getElementById("modal");
+    modal.classList.add("active");
 }
 
 var currentModalImg;
