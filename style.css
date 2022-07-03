@@ -112,7 +112,7 @@ hr {
 
 /* #region images */
 .images {
-    column-count: 3;
+    column-count: 4;
     column-gap: 0.75vw;
     background-color: var(--grey);
 

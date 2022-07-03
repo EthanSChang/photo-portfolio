@@ -33,36 +33,14 @@
         onclick="filterSelection('nature'); updateNav('nature')">Nature</button>
       <hr class="nav-line" id="nature">
     </div>
-    <div class="button-item"><button class="btn last"
-        onclick="filterSelection('flowers'); updateNav('flowers')">Flowers</button>
-      <hr class="nav-line" id="flowers">
-    </div>
   </div>
   <main>
     <div class="images">
-      <!-- <button id="background" onclick="openModal('background')" class="modal-btn">
-          <img class="filterDiv monochrome nature" src="images-min/background.jpg" loading="lazy">
-        </button>
-        <button id="dcmp" onclick="openModal('dcmp')" class="modal-btn">
-          <img class="filterDiv analog" src="images-min/dcmp.jpg" loading="lazy">
-        </button>
-        <button id="branches" onclick="openModal('branches')" class="modal-btn">
-          <img class="filterDiv monochrome nature" src="images-min/branches.jpg" loading="lazy">
-        </button>
-        <button id="dahlia" onclick="openModal('dahlia')" class="modal-btn">
-          <img class="filterDiv nature flowers" src="images-min/dahlia.jpg" loading="lazy">
-        </button> -->
 
       <img class="filterDiv monochrome nature" src="images/background.jpg" loading="lazy">
-
-
       <img class="filterDiv analog" src="images/dcmp.jpg" loading="lazy">
-
-
       <img class="filterDiv monochrome nature" src="images/branches.jpg" loading="lazy">
-
-
-      <img class="filterDiv nature flowers" src="images/dahlia.jpg" loading="lazy">
+      <img class="filterDiv nature" src="images/dahlia.jpg" loading="lazy">
 
     </div>
 
@@ -72,12 +50,12 @@
         <button id="modal-screen-btn" onclick="closeModal()"></button>
         <img id="modal-img" src="images/dcmp.jpg">
         <div id="modal-nav-btns">
+
           <button id="left-btn" class="modal-nav-btn" onclick="modalIncrement('left')"><img class="modal-icon"
               src="icons/chevron-left.svg"></button>
           <button id="right-btn" class="modal-nav-btn"onclick="modalIncrement('right')"><img class="modal-icon"
               src="icons/chevron-right.svg"></button>
-          <!-- <img id="left-btn" class="modal-icon modal-nav-btn" src="icons/chevron-left.svg">
-          <img id="right-btn" class="modal-icon modal-nav-btn" src="icons/chevron-right.svg"> -->
+  
         </div>
       </div>
 
