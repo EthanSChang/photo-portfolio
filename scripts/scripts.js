@@ -51,7 +51,7 @@ function closeModal() {
 
 $(document).ready(function () {
     $("img.filterDiv").click(function () {
-        openModal($(this));
+        openModal($(this), true);
     })
 
     $("img#left-btn").click(function () {
@@ -76,17 +76,20 @@ $(document).ready(function () {
         if (direction == "left" && imgIndex - 1 >= 0) {
             openModal($($(".filterDiv")[imgIndex - 1]));
         } else if (direction == "right" && imgIndex + 1 < $(".filterDiv").toArray().length) {
-            openModal($($(".filterDiv")[imgIndex + 1]));
+            openModal($($(".filterDiv")[imgIndex + 1]), false);
         }
     }
 
-    function openModal(image) {
+    function openModal(image, fullOpen) {
         var imgSrc = image.attr("src");
         var imgSrcset = image.attr("srcset");
 
         $("img#modal-img").hide();
-        $("#modal-nav-btns").hide();
-        $("#modal").addClass("active");
+
+        if(fullOpen){
+            $("#modal-nav-btns").hide();
+            $("#modal").addClass("active");
+        }
 
         $("img#modal-img").attr("src", imgSrc);
         $("img#modal-img").attr("srcset", imgSrcset);
@@ -107,8 +110,11 @@ $(document).ready(function () {
         $("img#modal-img").attr("sizes", imgSizes);
 
         $("img#modal-img").one("load", function () {
+            if(fullOpen){
+                $("#modal-nav-btns").show();
+            }
             $("img#modal-img").show();
-            $("#modal-nav-btns").show();
+            
         });
     }
 
