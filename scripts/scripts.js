@@ -91,12 +91,38 @@ function modalIncrement(direction){
 $(document).ready(function () {
     $("img.filterDiv").click(function () {
         var imgSrc = $(this).attr("src");
+        var imgSrcset = $(this).attr("srcset");
+        
+        
         $("img#modal-img").hide();
         $("#modal-nav-btns").hide();
         $("#modal").addClass("active");
 
         //console.log(imgSrc);
-        $("img#modal-img").attr("src", imgSrc).one("load", function () {
+        $("img#modal-img").attr("src", imgSrc);
+        $("img#modal-img").attr("srcset", imgSrcset);
+
+        var aspectRatio = $(this).height() / $(this).width();
+        var viewportAspectRatio = $(window).height() / $(window).width();
+        console.log(aspectRatio);
+        console.log(viewportAspectRatio);
+
+        var imgSizes;
+
+        if(aspectRatio <= viewportAspectRatio){
+            imgSizes = "85vw";
+
+        } else {
+            var imgWidth = (85/aspectRatio) * viewportAspectRatio;
+            console.log(imgWidth);
+            imgSizes = Math.round(imgWidth) + "vw";
+            console.log(imgSizes);
+        }
+        
+        $("img#modal-img").attr("sizes", imgSizes);
+
+
+        $("img#modal-img").one("load", function () {
             $("img#modal-img").show();
             $("#modal-nav-btns").show();
         });

@@ -205,8 +205,8 @@ hr {
 }
 
 #modal-img {
-    max-width: 85%;
-    max-height: 85%;
+    max-width: 85vw;
+    max-height: 85vh;
     object-fit: contain;
     z-index: 150;
     margin-left: 1vw;
@@ -219,14 +219,14 @@ hr {
 }
 
 #modal-screen-btn {
-    z-index: 111;
+    z-index: 109;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0);
-    transform: translate(0, -2.5vh);
+    /* transform: translate(0, -2.5vh); */
 }
 
 .modal-icon {
