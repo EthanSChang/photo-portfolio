@@ -3,6 +3,11 @@
     src: url("fonts/Montserrat-ExtraLight.ttf");
 }
 
+@font-face{
+    font-family: 'Gotham Thin';
+    src: url("fonts/Gotham-Thin.otf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +27,7 @@ body {
 }
 
 :root {
-    --grey: rgb(34, 34, 34);
+    --grey: rgb(44, 44, 44);
 }
 
 /* #region title */
@@ -32,7 +37,7 @@ body {
     height: 100vh;
     width: 100%;
     color: white;
-    font-family: Monserrat-ExtraLight;
+    font-family: Gotham Thin;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,13 +45,16 @@ body {
     background-color: rgba(0, 0, 0, 0.064);
 }
 
-
 hr {
-    border: 0.075em solid white;
+    border: 0.05em solid white;
     height: 0em;
     width: 15em;
 }
 
+#title-divider{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
 /* #endregion */
 /* #region navbar */
 .navbar {
@@ -74,12 +82,12 @@ hr {
     outline: none;
     background-color: #00000000;
     cursor: pointer;
-    font-family: Monserrat-ExtraLight;
-    font-size: 1.25em;
+    font-family: Gotham Thin;
+    font-size: 2.5vh;
     color: white;
 
-    padding-left: 0.75em;
-    padding-right: 0.75em;
+    padding-left: 1em;
+    padding-right: 1em;
     padding-top: 0.1em;
     padding-bottom: 0.1em;
 }
@@ -98,13 +106,13 @@ hr {
 
 .nav-line {
     height: 0em;
-    border: 0.075em solid var(--grey);
+    border: 0.05em solid var(--grey);
     border-radius: 1em;
-    width: 0.75em;
+    width: 0.5em;
 }
 
 .nav-line.active {
-    border: 0.075em solid white;
+    border: 0.05em solid white;
 }
 
 
@@ -113,7 +121,8 @@ hr {
 /* #region images */
 .images {
     padding-left: 0.75vw;
-    padding-right: 0.75vh;
+    padding-right: 0.75vw;
+    padding-bottom: 0.75vw;
     /* column-count: 5; */
     column-gap: 0.75vw;
     background-color: var(--grey);
@@ -134,6 +143,7 @@ hr {
 @media screen and (max-width: 1400px){
     .images{
         column-count: 3;
+
     }
 }
 
@@ -166,7 +176,7 @@ hr {
 /* #region modal */
 
 #modal {
-    background-color: rgba(0, 0, 0, 0.871);
+    background-color: rgba(35, 35, 35, 0.95);
     display: none;
     position: fixed;
     top: 0;

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Photography Portfolio</title>
   <link href="style.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -13,38 +13,130 @@
 <body onload="filterSelection('all')">
   <div class="background">
     <div class="title-text">
-      <h1 class="text">Ethan Chang</h1>
-      <hr>
-      <h2 class="text">Photography</h2>
+      <h1 class="text">ETHAN CHANG</h1>
+      <hr id="title-divider">
+      <h2 class="text">PHOTOGRAPHY</h2>
     </div>
   </div>
   <div class="navbar" id="button-container">
-    <div class="button-item"><button class="btn active" onclick="filterSelection('all'); updateNav('all')">All</button>
+    <div class="button-item"><button class="btn active" onclick="filterSelection('all'); updateNav('all')">ALL</button>
       <hr class="nav-line active" id="all">
     </div>
     <div class="button-item"><button class="btn"
-        onclick="filterSelection('monochrome'); updateNav('monochrome')">Monochrome</button>
+        onclick="filterSelection('monochrome'); updateNav('monochrome')">MONOCHROME</button>
       <hr class="nav-line" id="monochrome">
     </div>
     <div class="button-item"><button class="btn"
-        onclick="filterSelection('analog'); updateNav('analog')">Analog</button>
+        onclick="filterSelection('analog'); updateNav('analog')">ANALOG</button>
       <hr class="nav-line" id="analog">
     </div>
     <div class="button-item"><button class="btn"
-        onclick="filterSelection('nature'); updateNav('nature')">Nature</button>
+        onclick="filterSelection('nature'); updateNav('nature')">NATURE</button>
+      <hr class="nav-line" id="nature">
+    </div>
+    <div class="button-item"><button class="btn last"
+        onclick="filterSelection('landscape'); updateNav('landscape')">LANDSCAPE</button>
       <hr class="nav-line" id="nature">
     </div>
   </div>
   <main>
     <div class="images">
+      <!-- image template format -->
+      <!-- <img class="filterDiv " src="images/img-name.jpg"
+        srcset="images/img-name560.jpg 560w, images/img-name1024.jpg 1024w, images/img-name1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy"> -->
 
-      <img class="filterDiv monochrome nature" src="images/background.jpg" 
-        srcset= "images/background640.jpg 640w, images/background1024.jpg 1024w, images/background1280.jpg 1280w" 
-        sizes= "(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" 
-        loading="lazy">
-      <img class="filterDiv analog" src="images/dcmp.jpg" loading="lazy">
-      <img class="filterDiv monochrome nature" src="images/branches.jpg" loading="lazy">
-      <img class="filterDiv nature" src="images/dahlia.jpg" loading="lazy">
+      <img class="filterDiv monochrome nature landscape" src="images/background.jpg"
+        srcset="images/background560.jpg 560w, images/background1024.jpg 1024w, images/background1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv monochrome nature landscape" src="images/uk-waterfall.jpg"
+        srcset="images/uk-waterfall560.jpg 560w, images/uk-waterfall1024.jpg 1024w, images/uk-waterfall1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv monochrome nature landscape" src="images/uk-lake.jpg"
+        srcset="images/uk-lake560.jpg 560w, images/uk-lake1024.jpg 1024w, images/uk-lake1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv" src="images/uk-gsc.jpg"
+        srcset="images/uk-gsc560.jpg 560w, images/uk-gsc1024.jpg 1024w, images/uk-gsc1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv monochrome" src="images/uk-gsc-mono.jpg"
+        srcset="images/uk-gsc-mono560.jpg 560w, images/uk-gsc-mono1024.jpg 1024w, images/uk-gsc-mono1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv monochrome nature landscape" src="images/redwoods-trail.jpg"
+        srcset="images/redwoods-trail560.jpg 560w, images/redwoods-trail1024.jpg 1024w, images/redwoods-trail1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv monochrome nature" src="images/redwoods-flower.jpg"
+        srcset="images/redwoods-flower560.jpg 560w, images/redwoods-flower1024.jpg 1024w, images/redwoods-flower1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv monochrome nature" src="images/redwoods-elk.jpg"
+        srcset="images/redwoods-elk560.jpg 560w, images/redwoods-elk1024.jpg 1024w, images/redwoods-elk1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv monochrome nature" src="images/redwoods-clover.jpg"
+        srcset="images/redwoods-clover560.jpg 560w, images/redwoods-clover1024.jpg 1024w, images/redwoods-clover1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv monochrome nature landscape" src="images/kauai-waves.jpg"
+        srcset="images/kauai-waves560.jpg 560w, images/kauai-waves1024.jpg 1024w, images/kauai-waves1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv monochrome landscape" src="images/kauai-taro.jpg"
+        srcset="images/kauai-taro560.jpg 560w, images/kauai-taro1024.jpg 1024w, images/kauai-taro1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv monochrome nature" src="images/kauai-leaves.jpg"
+        srcset="images/kauai-leaves560.jpg 560w, images/kauai-leaves1024.jpg 1024w, images/kauai-leaves1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv nature" src="images/kauai-flowers.jpg"
+        srcset="images/kauai-flowers560.jpg 560w, images/kauai-flowers1024.jpg 1024w, images/kauai-flowers1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv monochrome nature" src="images/kauai-branches.jpg"
+        srcset="images/kauai-branches560.jpg 560w, images/kauai-branches1024.jpg 1024w, images/kauai-branches1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv monochrome nature" src="images/kauai-bird.jpg"
+        srcset="images/kauai-bird560.jpg 560w, images/kauai-bird1024.jpg 1024w, images/kauai-bird1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv monochrome" src="images/bandon-lighthouse.jpg"
+        srcset="images/bandon-lighthouse560.jpg 560w, images/bandon-lighthouse1024.jpg 1024w, images/bandon-lighthouse1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv nature" src="images/bandon-flower.jpg"
+        srcset="images/bandon-flower560.jpg 560w, images/bandon-flower1024.jpg 1024w, images/bandon-flower1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv nature" src="images/bandon-fern.jpg"
+        srcset="images/bandon-fern560.jpg 560w, images/bandon-fern1024.jpg 1024w, images/bandon-fern1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv nature" src="images/bandon-bird.jpg"
+        srcset="images/bandon-bird560.jpg 560w, images/bandon-bird1024.jpg 1024w, images/bandon-bird1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv monochrome landscape" src="images/bandon-beach.jpg"
+        srcset="images/bandon-beach560.jpg 560w, images/bandon-beach1024.jpg 1024w, images/bandon-beach1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv nature" src="images/8-31-21-flowers.jpg"
+        srcset="images/8-31-21-flowers560.jpg 560w, images/8-31-21-flowers1024.jpg 1024w, images/8-31-21-flowers1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv nature" src="images/5-5-20-iris.jpg"
+        srcset="images/5-5-20-iris560.jpg 560w, images/5-5-20-iris1024.jpg 1024w, images/5-5-20-iris1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
+
+      <img class="filterDiv nature" src="images/5-5-20-camelia.jpg"
+        srcset="images/5-5-20-camelia560.jpg 560w, images/5-5-20-camelia1024.jpg 1024w, images/5-5-20-camelia1800.jpg 1800w"
+        sizes="(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" loading="lazy">
 
     </div>
 
@@ -52,14 +144,15 @@
 
       <div id="modal-screen-items">
         <button id="modal-screen-btn" onclick="closeModal()"></button>
+        <!-- todo: add srcset for modal img -->
         <img id="modal-img" src="images/dcmp.jpg">
         <div id="modal-nav-btns">
 
           <button id="left-btn" class="modal-nav-btn" onclick="modalIncrement('left')"><img class="modal-icon"
               src="icons/chevron-left.svg"></button>
-          <button id="right-btn" class="modal-nav-btn"onclick="modalIncrement('right')"><img class="modal-icon"
+          <button id="right-btn" class="modal-nav-btn" onclick="modalIncrement('right')"><img class="modal-icon"
               src="icons/chevron-right.svg"></button>
-  
+
         </div>
       </div>
 
