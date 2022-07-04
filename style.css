@@ -243,12 +243,12 @@ hr {
     z-index: 500;
 }
 
-.modal-nav-btn {
+.modal-icon {
     z-index: 500;
     background-color: rgba(0, 0, 0, 0);
 }
 
-.modal-nav-btn:hover {
+.modal-icon:hover {
     cursor: pointer;
 }
 
