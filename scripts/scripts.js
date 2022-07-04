@@ -92,11 +92,13 @@ $(document).ready(function () {
     $("img.filterDiv").click(function () {
         var imgSrc = $(this).attr("src");
         $("img#modal-img").hide();
+        $("#modal-nav-btns").hide();
         $("#modal").addClass("active");
 
         //console.log(imgSrc);
         $("img#modal-img").attr("src", imgSrc).one("load", function () {
             $("img#modal-img").show();
+            $("#modal-nav-btns").show();
         });
     })
 
