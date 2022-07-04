@@ -74,9 +74,9 @@ $(document).ready(function () {
         }
 
         if (direction == "left" && imgIndex - 1 >= 0) {
-            openModal($($(".filterDiv")[imgIndex - 1]));
+            openModal($($(".filterDiv")[imgIndex - 1]), true);
         } else if (direction == "right" && imgIndex + 1 < $(".filterDiv").toArray().length) {
-            openModal($($(".filterDiv")[imgIndex + 1]), false);
+            openModal($($(".filterDiv")[imgIndex + 1]), true);
         }
     }
 
