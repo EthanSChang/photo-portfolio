@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Photography Portfolio</title>
   <link href="style.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -37,7 +38,10 @@
   <main>
     <div class="images">
 
-      <img class="filterDiv monochrome nature" src="images/background.jpg" loading="lazy">
+      <img class="filterDiv monochrome nature" src="images/background.jpg" 
+        srcset= "images/background640.jpg 640w, images/background1024.jpg 1024w, images/background1280.jpg 1280w" 
+        sizes= "(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw" 
+        loading="lazy">
       <img class="filterDiv analog" src="images/dcmp.jpg" loading="lazy">
       <img class="filterDiv monochrome nature" src="images/branches.jpg" loading="lazy">
       <img class="filterDiv nature" src="images/dahlia.jpg" loading="lazy">
