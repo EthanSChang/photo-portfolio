@@ -91,9 +91,12 @@ function modalIncrement(direction){
 $(document).ready(function () {
     $("img.filterDiv").click(function () {
         var imgSrc = $(this).attr("src");
+        $("img#modal-img").hide();
+        $("#modal").addClass("active");
+
         //console.log(imgSrc);
         $("img#modal-img").attr("src", imgSrc).one("load", function () {
-            $("#modal").addClass("active");
+            $("img#modal-img").show();
         });
     })
 
