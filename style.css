@@ -75,6 +75,9 @@ h2 {
     background-color: var(--grey);
     padding-top: 1vh;
     padding-bottom: 1vh;
+
+    position: sticky;
+    top: 0;
 }
 
 .button-item {
