@@ -50,6 +50,22 @@ function closeModal() {
 }
 
 $(document).ready(function () {
+    var imgSizes = "(max-width: 800px) 49vw, (max-width: 1400px) 32.5vw, (max-width: 2400px) 24vw, 19.25vw";
+    var imgs = $(".filterDiv").toArray();
+
+    for (i = 0; i < imgs.length; i++) {
+        const srcSplit = $(imgs[i]).attr("src").split("/");
+        var imgSrc = srcSplit[srcSplit.length - 1].replace(".jpg", "");
+        console.log(imgSrc);
+
+        var srcSet = "images/" + imgSrc + "560.jpg 560w, images/" + imgSrc + "1024.jpg 1024w, images/" + imgSrc + "1800.jpg 1800w";
+
+        $(imgs[i]).attr("srcset", srcSet);
+        $(imgs[i]).attr("sizes", imgSizes);
+    }
+
+
+
     $("img.filterDiv").click(function () {
         openModal($(this), true);
     })
@@ -86,7 +102,7 @@ $(document).ready(function () {
 
         $("img#modal-img").hide();
 
-        if(fullOpen){
+        if (fullOpen) {
             $("#modal-nav-btns").hide();
             $("#modal").addClass("active");
         }
@@ -110,11 +126,11 @@ $(document).ready(function () {
         $("img#modal-img").attr("sizes", imgSizes);
 
         $("img#modal-img").one("load", function () {
-            if(fullOpen){
+            if (fullOpen) {
                 $("#modal-nav-btns").show();
             }
             $("img#modal-img").show();
-            
+
         });
     }
 

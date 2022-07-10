@@ -134,7 +134,7 @@ h2 {
 /* #endregion */
 
 /* #region images */
-.images {
+#images {
     padding-left: 0.75vw;
     padding-right: 0.75vw;
     padding-bottom: 0.75vw;
@@ -144,26 +144,26 @@ h2 {
 }
 
 @media screen and (min-width: 2400px){
-    .images{
+    #images{
         column-count: 5;
     }
 }
 
 @media screen and (max-width: 2400px){
-    .images{
+    #images{
         column-count: 4;
     }
 }
 
 @media screen and (max-width: 1400px){
-    .images{
+    #images{
         column-count: 3;
 
     }
 }
 
 @media screen and (max-width: 800px){
-    .images{
+    #images{
         column-count: 2;
     }
 }
@@ -172,13 +172,12 @@ h2 {
     display: none;
 }
 
-.images img {
+#images img {
     width: 100%;
     height: auto;
     padding: 0;
     margin-bottom: 0.75vw;
-
-}
+}  
 
 .show {
     display: flex;
