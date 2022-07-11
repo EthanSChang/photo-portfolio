@@ -143,10 +143,24 @@ h2 {
     background-color: var(--grey);
 }
 
+#images img {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin-bottom: 0.75vw;
+}  
+
 @media screen and (min-width: 2400px){
     #images{
         column-count: 5;
+        column-gap: 0.5vw;
+        padding-left: 0.5vw;
+        padding-right: 0.5vw;
+        padding-bottom: 0.5vw;
     }
+    #images img {
+        margin-bottom: 0.5vw;
+    }  
 }
 
 @media screen and (max-width: 2400px){
@@ -165,19 +179,20 @@ h2 {
 @media screen and (max-width: 800px){
     #images{
         column-count: 2;
+        column-gap: 1vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        padding-bottom: 1vw;
+    }
+
+    #images img{
+        margin-bottom: 1vw;
     }
 }
 
 .filterDiv {
     display: none;
 }
-
-#images img {
-    width: 100%;
-    height: auto;
-    padding: 0;
-    margin-bottom: 0.75vw;
-}  
 
 .show {
     display: flex;
