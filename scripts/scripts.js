@@ -85,7 +85,7 @@ $(document).ready(function () {
         for (i = 0; i < $(".filterDiv").toArray().length; i++) {
             if ($(".filterDiv")[i].src.includes(currentImg.attr("src"))) {
                 imgIndex = i;
-                console.log(imgIndex);
+                //console.log(imgIndex);
             }
         }
 
