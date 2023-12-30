@@ -64,10 +64,10 @@ $(document).ready(function () {
 
     for (i = 0; i < imgs.length; i++) {
         const srcSplit = $(imgs[i]).attr("src").split("/");
-        var imgSrc = srcSplit[srcSplit.length - 1].replace(".jpg", "");
+        var imgSrc = srcSplit[srcSplit.length - 1].replace(".webp", "");
         //console.log(imgSrc);
 
-        var srcSet = "images/" + imgSrc + "560.jpg 560w, images/" + imgSrc + "1024.jpg 1024w, images/" + imgSrc + "1800.jpg 1800w";
+        var srcSet = "images/" + imgSrc + "560.webp 560w, images/" + imgSrc + "1024.webp 1024w, images/" + imgSrc + "1800.webp 1800w";
 
         $(imgs[i]).attr("srcset", srcSet);
         $(imgs[i]).attr("sizes", imgSizes);
