@@ -78,7 +78,7 @@ $(document).ready(function () {
         modalIncrement("right");
     })
 
-   window.onscroll = function(){
+    window.onscroll = function(){
         closeModal();
     }
 
