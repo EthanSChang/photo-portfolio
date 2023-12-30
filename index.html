@@ -11,33 +11,30 @@
 </head>
 
 <body onload="filterSelection('all')">
-  <div class="background">
-    <div class="title-text">
-      <h1 class="text">ETHAN CHANG</h1>
-      <hr id="title-divider">
-      <h2 class="text">PHOTOGRAPHY</h2>
-    </div>
-  </div>
   <div class="navbar" id="button-container">
-    <div class="button-item"><button class="btn active" onclick="filterSelection('all'); updateNav('all')">ALL</button>
-      <hr class="nav-line active" id="all">
+    <h1 class="text" id="navbar-title">ETHAN CHANG</h1>
+    <div id="navbar-buttons">
+      <div class="button-item"><button class="btn active" onclick="filterSelection('all'); updateNav('all')">ALL</button>
+        <hr class="nav-line active" id="all">
+      </div>
+      <div class="button-item"><button class="btn"
+          onclick="filterSelection('monochrome'); updateNav('monochrome')">MONOCHROME</button>
+        <hr class="nav-line" id="monochrome">
+      </div>
+      <div class="button-item"><button class="btn"
+          onclick="filterSelection('analog'); updateNav('analog')">ANALOG</button>
+        <hr class="nav-line" id="analog">
+      </div>
+      <div class="button-item"><button class="btn"
+          onclick="filterSelection('nature'); updateNav('nature')">NATURE</button>
+        <hr class="nav-line" id="nature">
+      </div>
+      <div class="button-item"><button class="btn last"
+          onclick="filterSelection('landscape'); updateNav('landscape')">LANDSCAPE</button>
+        <hr class="nav-line" id="landscape">
+      </div>
     </div>
-    <div class="button-item"><button class="btn"
-        onclick="filterSelection('monochrome'); updateNav('monochrome')">MONOCHROME</button>
-      <hr class="nav-line" id="monochrome">
-    </div>
-    <div class="button-item"><button class="btn"
-        onclick="filterSelection('analog'); updateNav('analog')">ANALOG</button>
-      <hr class="nav-line" id="analog">
-    </div>
-    <div class="button-item"><button class="btn"
-        onclick="filterSelection('nature'); updateNav('nature')">NATURE</button>
-      <hr class="nav-line" id="nature">
-    </div>
-    <div class="button-item"><button class="btn last"
-        onclick="filterSelection('landscape'); updateNav('landscape')">LANDSCAPE</button>
-      <hr class="nav-line" id="landscape">
-    </div>
+    
   </div>
   <main>
     <div id="images">

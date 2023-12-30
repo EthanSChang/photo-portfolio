@@ -56,7 +56,7 @@ $(document).ready(function () {
     for (i = 0; i < imgs.length; i++) {
         const srcSplit = $(imgs[i]).attr("src").split("/");
         var imgSrc = srcSplit[srcSplit.length - 1].replace(".jpg", "");
-        console.log(imgSrc);
+        //console.log(imgSrc);
 
         var srcSet = "images/" + imgSrc + "560.jpg 560w, images/" + imgSrc + "1024.jpg 1024w, images/" + imgSrc + "1800.jpg 1800w";
 
@@ -77,6 +77,10 @@ $(document).ready(function () {
     $("img#right-btn").click(function () {
         modalIncrement("right");
     })
+
+   window.onscroll = function(){
+        closeModal();
+    }
 
     function modalIncrement(direction) {
         var currentImg = $("#modal-img");
