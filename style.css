@@ -78,16 +78,11 @@ main{
 #navbar-buttons {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     padding-top: 30px;
     flex-wrap: nowrap;
     background-color: white;
 }
-
-
-
-/* .btn:not(.last) {
-    border-right: 0.05em solid black;
-} */
 
 .btn {
     border: none;
@@ -108,16 +103,7 @@ main{
 
 
 .btn.active{
-    border: none;
-    margin: none;
-    outline: none;
-    background-color: #ffffff00;
-    cursor: pointer;
-    font-family: Monserrat-Light;
-    font-size: 1.2em;
     color: black;
-    height: 30px;
-    
 }
 
 
@@ -129,7 +115,7 @@ main{
     padding-right: 40px;
     padding-bottom: 40px;
     padding-top: 40px;
-    column-gap: 0.35vw;
+    column-gap: 0.4vw;
     background-color: var(--white);
 }
 
@@ -137,16 +123,17 @@ main{
     width: 100%;
     height: auto;
     padding: 0;
-    margin-bottom: 0.35vw;
+    margin-bottom: 0.4vw;
+}  
+
+#images img:hover {
+  
+    filter: brightness(115%);
 }  
 
 @media screen and (min-width: 2400px){
     #images{
         column-count: 5;
-        /* column-gap: 0.5vw;
-        padding-left: 0.5vw;
-        padding-right: 0.5vw;
-        padding-bottom: 0.5vw; */
     }
     #images img {
         margin-bottom: 0.5vw;
@@ -169,10 +156,6 @@ main{
 @media screen and (max-width: 800px){
     #images{
         column-count: 1;
-        /* column-gap: 1vw;
-        padding-left: 1vw;
-        padding-right: 1vw;
-        padding-bottom: 1vw; */
     }
 
     #images img{
