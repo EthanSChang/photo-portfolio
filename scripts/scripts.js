@@ -35,7 +35,7 @@ function RemoveClass(element, name) {
 }
 
 function updateNav(id) {
-    var lines = document.getElementsByClassName("nav-line");
+    var lines = document.getElementsByClassName("btn");
 
     for (var i = 0; i < lines.length; i++) {
         lines[i].classList.remove("active");

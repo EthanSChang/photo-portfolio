@@ -97,14 +97,27 @@ main{
     cursor: pointer;
     font-family: Monserrat-Light;
     font-size: 1.2em;
-    color: black;
+    color: grey;
     height: 30px;
     
 }
 
 .btn:hover {
-    text-decoration-line: underline;
-    text-decoration-color: rgb(77, 190, 255);
+    color:black;
+}
+
+
+.btn.active{
+    border: none;
+    margin: none;
+    outline: none;
+    background-color: #ffffff00;
+    cursor: pointer;
+    font-family: Monserrat-Light;
+    font-size: 1.2em;
+    color: black;
+    height: 30px;
+    
 }
 
 .button {
