@@ -16,9 +16,6 @@
 
 .background {
     padding: 0;
-    /* background-image: url("images/background.jpg");
-    background-position: center center;
-    background-size: cover; */
 
 }
 
@@ -56,12 +53,10 @@ h2 {
 /* #region navbar */
 .navbar {
     display: flex;
-    /* justify-content: center; */
     align-items: center; 
     flex-wrap: wrap;
     background-color: white;
     height: 80px;
-    /* position: sticky; */
     top: 0;
 }
 
@@ -79,9 +74,6 @@ h2 {
     align-items: center;
     flex-wrap: wrap;
     background-color: white;
-    
-
-  
 }
 
 .button-item {
@@ -144,7 +136,6 @@ h2 {
     padding-right: 0.35vw;
     padding-bottom: 0.35vw;
     padding-top: 0;
-    /* column-count: 5; */
     column-gap: 0.35vw;
     background-color: var(--white);
 }
