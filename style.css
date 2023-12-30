@@ -47,22 +47,15 @@ h2 {
 /* #endregion */
 /* #region navbar */
 
-main{
-    display: flex;
-    flex-direction: row;
-}
-
 .navbar {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     background-color: white;
     width: 300px;
-    height: 100vh;
     padding-left: 35px;
     padding-top: 60px;
-    position: sticky;
-    top: 0;
+    position: fixed;
  
 }
 
@@ -80,7 +73,7 @@ main{
     flex-direction: column;
     align-items: flex-start;
     padding-top: 30px;
-    flex-wrap: nowrap;
+
     background-color: white;
 }
 
@@ -111,7 +104,7 @@ main{
 
 /* #region images */
 #images {
-    padding-left: 0vw;
+    padding-left: 335px;
     padding-right: 40px;
     padding-bottom: 40px;
     padding-top: 40px;
