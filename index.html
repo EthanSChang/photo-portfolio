@@ -11,32 +11,33 @@
 </head>
 
 <body onload="filterSelection('all')">
-  <div class="navbar" id="button-container">
-    <h1 class="text" id="navbar-title">ETHAN CHANG</h1>
-    <div id="navbar-buttons">
-      <div class="button-item"><button class="btn active" onclick="filterSelection('all'); updateNav('all')">ALL</button>
-        <hr class="nav-line active" id="all">
-      </div>
-      <div class="button-item"><button class="btn"
-          onclick="filterSelection('monochrome'); updateNav('monochrome')">MONOCHROME</button>
-        <hr class="nav-line" id="monochrome">
-      </div>
-      <div class="button-item"><button class="btn"
-          onclick="filterSelection('analog'); updateNav('analog')">ANALOG</button>
-        <hr class="nav-line" id="analog">
-      </div>
-      <div class="button-item"><button class="btn"
-          onclick="filterSelection('nature'); updateNav('nature')">NATURE</button>
-        <hr class="nav-line" id="nature">
-      </div>
-      <div class="button-item"><button class="btn last"
-          onclick="filterSelection('landscape'); updateNav('landscape')">LANDSCAPE</button>
-        <hr class="nav-line" id="landscape">
-      </div>
-    </div>
-    
-  </div>
+  
   <main>
+    
+    <div class="navbar" id="button-container">
+      <h1 class="text" id="navbar-title">ETHAN CHANG</h1>
+      <div id="navbar-buttons">
+        
+        <button class="btn" id="monochrome"
+            onclick="updateNav('monochrome')">Monochrome</button>
+          
+        
+        <button class="btn" id="analog"
+            onclick="updateNav('analog')">Analog</button>
+          
+        
+        <button class="btn" id="nature"
+            onclick="updateNav('nature')">Nature</button>
+          
+        
+        <button class="btn" id="landscape"
+            onclick="updateNav('landscape')">Landscape</button>
+          
+        
+      </div>
+      
+    </div>
+
     <div id="images">
       <!-- image template format -->
       <!-- <img class="filterDiv " src="images/img-name.jpg" loading="lazy"> -->
