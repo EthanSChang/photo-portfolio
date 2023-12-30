@@ -34,14 +34,23 @@ function RemoveClass(element, name) {
     element.className = arr1.join(" ");
 }
 
+var currentFilter = "all";
 function updateNav(id) {
     var lines = document.getElementsByClassName("btn");
 
     for (var i = 0; i < lines.length; i++) {
         lines[i].classList.remove("active");
     }
-    var changedBtn = document.getElementById(id);
-    changedBtn.classList.add("active");
+
+    if(id==currentFilter){
+        filterSelection("all");
+        currentFilter = "all";
+    } else{
+        filterSelection(id);
+        var changedBtn = document.getElementById(id);
+        changedBtn.classList.add("active");
+        currentFilter = id;
+    }
 }
 
 function closeModal() {
