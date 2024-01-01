@@ -3,6 +3,11 @@
     src: url("fonts/Montserrat-Light.ttf");
 }
 
+@font-face {
+    font-family: 'Monserrat-ExtraLight';
+    src: url("fonts/Montserrat-ExtraLight.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -118,9 +123,6 @@ h2 {
     #images{
         column-count: 5;
     }
-    #images img {
-        margin-bottom: 0.5vw;
-    }  
 }
 
 @media screen and (max-width: 2400px){
@@ -132,18 +134,46 @@ h2 {
 @media screen and (max-width: 1400px){
     #images{
         column-count: 3;
-
     }
 }
 
 @media screen and (max-width: 800px){
     #images{
-        column-count: 1;
+        column-count: 2;
     }
 
-    #images img{
-        margin-bottom: 1vw;
+    .navbar {
+        flex-direction: row;
+        width: 100vw;
+        height: 60px;
+        padding-top: 0;
+        padding-left:0;
+        align-items: center;
     }
+
+    #images {
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-bottom: 4px;
+        column-gap: 4px;
+        background-color: var(--white);
+    }
+
+    #images img {
+        margin-bottom: 4px;
+    }  
+
+    #navbar-title{
+        padding-left: 15px;
+        padding-right: 10px;
+        font-size: 24px;
+        font-family: Monserrat-ExtraLight; 
+    }
+    
+    #navbar-buttons {
+        transform: scale(0);
+    }
+
 }
 
 .filterDiv {
