@@ -27,24 +27,6 @@ body {
     --grey: rgb(44, 44, 44);
 }
 
-/* #region title */
-
-hr {
-    border: 0.05em solid white;
-    height: 0em;
-    width: 18em;
-}
-
-h1{
-    font-size: 2.5em;
-    max-width: 100vw;
-}
-
-h2 {
-    font-size: 2em;
-}
-
-/* #endregion */
 /* #region navbar */
 
 .navbar {
@@ -52,14 +34,16 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     background-color: white;
-    width: 265px;
-    padding-left: 35px;
-    padding-top: 60px;
+    width: 300px;
+    height: 100vh;
+    
     position: fixed;
 }
 
 
 #navbar-title{
+    padding-top: 60px;
+    padding-left: 35px;
     font-size: 1.5em;
     color: black;
     font-family: Monserrat-Light; 
@@ -70,6 +54,7 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     padding-top: 30px;
+    padding-left: 35px;
     background-color: white;
 }
 
@@ -95,6 +80,21 @@ h2 {
     color: black;
 }
 
+#links{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: auto;
+    padding-bottom: 15px;
+}
+
+.link-icon {
+    width: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    filter: opacity(0.7);
+}
 
 /* #endregion */
 
